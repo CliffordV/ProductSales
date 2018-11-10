@@ -1,4 +1,4 @@
-# ProductSales
+# Product Sales
 NetBeans IDE 8.2</br>
 Software Engineering Assessment 
 
@@ -13,10 +13,10 @@ JDBC + SQLite
 
 > [sqlite-jdbc 3.19.3](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
-# Connect to database
+### Database Connection
   ![Database Connection](https://github.com/CliffordV/ProductSales/blob/master/img/jdbc%20sqlite%20connection.png "Database Connection")
+  ![Database Connection](https://github.com/CliffordV/ProductSales/blob/master/img/url.png "JDBC URL")
   ![Database Connection](https://github.com/CliffordV/ProductSales/blob/master/img/path.png "PATH")
-  ![Database Connection](https://github.com/CliffordV/ProductSales/blob/master/img/url.png "URL")
 
 # Screenshots
 <p align="center">
