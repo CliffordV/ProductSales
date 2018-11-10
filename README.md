@@ -14,7 +14,7 @@ JDBC + SQLite
 > [sqlite-jdbc 3.19.3](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
 # Screenshots
-![frame 1](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png "Frame 1")
+![frame 1](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png =250x250)
 
 ![frame 2](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction%20Details.png "Frame 2")
 
