@@ -20,7 +20,7 @@ JDBC + SQLite
 
 # Screenshots
 <p align="center">
-<img src="https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png" width="300" height="400" alt="Frame 1"/>
-<img src="https://github.com/CliffordV/ProductSales/blob/master/img/Transaction%20Details.png" width="300" height="400" alt="Frame 2"/>
+<img src="https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png" width="400" height="500" alt="Frame 1"/>
+<img src="https://github.com/CliffordV/ProductSales/blob/master/img/Transaction%20Details.png" width="400" height="500" alt="Frame 2"/>
 <img src="https://github.com/CliffordV/ProductSales/blob/master/img/Update%20Transaction.png" width="450" height="500" alt="Frame 3"/>
 </p>
