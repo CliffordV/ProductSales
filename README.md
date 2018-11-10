@@ -14,3 +14,7 @@ https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 # Screenshots
 </br>
 ![frame1](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png "Frame 1")
+</br>
+![frame2](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction%20Details.png "Frame 2")
+</br>
+![frame3](https://github.com/CliffordV/ProductSales/blob/master/img/Update%20Transaction.png "Frame 3")
