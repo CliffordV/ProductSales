@@ -2,6 +2,8 @@
 NetBeans IDE 8.2</br>
 Software Engineering Assessment 
 
+JDBC + SQLite
+
 > [JDBC - Java Database Connectivity](http://docs.oracle.com/javase/tutorial/jdbc/basics/index.html)
 
 > [SQLite - Embedded SQL database engine](https://www.sqlite.org/about.html)
