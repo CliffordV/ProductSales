@@ -1,6 +1,6 @@
 # ProductSales
-Software Engineering Assessment </br>
-NetBeans IDE 8.2
+NetBeans IDE 8.2</br>
+Software Engineering Assessment 
 
 # Download Jar Files
 JCalendar.jar
