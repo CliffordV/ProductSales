@@ -10,3 +10,10 @@ https://toedter.com/jcalendar/
 sqlite-jdbc 3.19.3
 </br> 
 https://bitbucket.org/xerial/sqlite-jdbc/downloads/
+
+</br>
+![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Transaction.png)
+</br>
+![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Transaction Details.png)
+</br>
+![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Update Transaction.png)
