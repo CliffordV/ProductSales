@@ -12,8 +12,8 @@ sqlite-jdbc 3.19.3
 https://bitbucket.org/xerial/sqlite-jdbc/downloads/
 
 </br>
-![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Transaction.png)
+![alt text](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction.png)
 </br>
-![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Transaction Details.png)
+![alt text](https://github.com/CliffordV/ProductSales/blob/master/img/Transaction%20Details.png)
 </br>
-![alt text](https://raw.githubusercontent.com/cliffordV/ProductSales/img/Update Transaction.png)
+![alt text](https://github.com/CliffordV/ProductSales/blob/master/img/Update%20Transaction.png)
