@@ -7,8 +7,8 @@ public class SQLite {
     
     static java.sql.Connection conn  = null;
     static java.sql.Statement stmt = null;
-    static String url = "jdbc:sqlite:C:\\Users\\VanderClifford\\Documents\\NetBeansProjects\\ProductSales\\src\\com\\app\\sqlite.sqlite";
-//    static String url = "<PATH>";
+//    static String url = "jdbc:sqlite:C:\\Users\\VanderClifford\\Documents\\NetBeansProjects\\ProductSales\\src\\com\\app\\sqlite.sqlite";
+    static String url = "<PATH>";
     static String error = "";
     
     public static boolean openDB(){
