@@ -21,7 +21,7 @@ public class FrmViewTransaction extends javax.swing.JFrame {
         Client();
         GenerateID();
         
-        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat f = new SimpleDateFormat("MMM dd, yyyy");
         String date = f.format(new Date());
         
         this.txtDate.setText(date);

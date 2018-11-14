@@ -18,6 +18,10 @@ public class FrmViewProduct extends javax.swing.JFrame {
         this.setResizable(false);
         this.viewTable();
         comboboxItem();
+        
+        SimpleDateFormat dateFormat1 = new SimpleDateFormat("MMM dd, yyyy");
+        String currentDate = dateFormat1.format(new Date());
+        lDate.setText(currentDate);
     }
     public void viewTable(){
             if (SQLite.openDB()) {
@@ -74,8 +78,8 @@ public class FrmViewProduct extends javax.swing.JFrame {
         btnSubmit = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         txtSupname = new javax.swing.JTextField();
-        sdate = new com.toedter.calendar.JDateChooser();
         jLabel2 = new javax.swing.JLabel();
+        lDate = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -199,11 +203,14 @@ public class FrmViewProduct extends javax.swing.JFrame {
         txtSupname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtSupname.setEnabled(false);
         jPanel1.add(txtSupname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 580, 141, -1));
-        jPanel1.add(sdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 141, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Sales Details ID");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        lDate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lDate.setEnabled(false);
+        jPanel1.add(lDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 141, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -345,61 +352,35 @@ public static int carID;
 
             return result;
         }
-    private boolean checkRentalScheduleDate(){
-            boolean valid = true;
 
-               try{
-                SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
-                String currentDate = dateFormat1.format(new Date());
-                String dateStart = dateFormat1.format(sdate.getDate());
-                
-                if(dateStart.compareTo(currentDate) >= 0){
-                    valid = false;
-                }else{
-                    System.out.println("date not valid!");
-                }   
-               }
-               catch(Exception e ){
-                   System.out.println("Error : " + e.getMessage());
-               }
-            return valid; 
-        }
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        if(checkRentalScheduleDate()){
-            JOptionPane.showMessageDialog(null, "The entered date must be in present or future");
+        if(validateProduct()){
+            javax.swing.JOptionPane.showMessageDialog(null, "Try Another Product ID");
         }
-        else{
-            if(validateProduct()){
-                javax.swing.JOptionPane.showMessageDialog(null, "Try Another Product ID");
-            }
-            else{
-                if(SQLite.openDB()){
-                    try{
-                        SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
-                        String dateStart = dateFormat2.format(sdate.getDate());
+            if(SQLite.openDB()){
+                try{
+                    String dateStart = lDate.getText();
 
-                        int Cno = Integer.parseInt((String) this.cbProduct.getSelectedItem());
+                    int Cno = Integer.parseInt((String) this.cbProduct.getSelectedItem());
 
-                        String values = "'" +  dateStart + "'," + transactionid + "," + Cno;
-                        String set = "Sales_Date, SalesID, ProductID";
+                    String values = "'" +  dateStart + "'," + transactionid + "," + Cno;
+                    String set = "Sales_Date, SalesID, ProductID";
 
-                        SQLite.create("tblSales_Details", set, values);
+                    SQLite.create("tblSales_Details", set, values);
 
-                        String name = this.txtProductname.getText();
-                        int cartype = 0;
+                    String name = this.txtProductname.getText();
+                    int cartype = 0;
 
-                        javax.swing.JOptionPane.showMessageDialog(null, "New Transaction Created!");
-                        this.viewTable();
-                        this.txtID_delete.setText("");
-                        this.txtID_edit.setText("");
-                    }
-                    catch(Exception e){
-                        javax.swing.JOptionPane.showMessageDialog(null, "Create Error: " + e.getMessage());
-                    }
+                    javax.swing.JOptionPane.showMessageDialog(null, "New Transaction Created!");
+                    this.viewTable();
+                    this.txtID_delete.setText("");
+                    this.txtID_edit.setText("");
+                }
+                catch(Exception e){
+                    javax.swing.JOptionPane.showMessageDialog(null, "Create Error: " + e.getMessage());
                 }
             }
-        }
         SQLite.closeDB();
         this.viewTable();
         this.txtID_delete.setText("");
@@ -481,7 +462,7 @@ public static int carID;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.toedter.calendar.JDateChooser sdate;
+    private javax.swing.JTextField lDate;
     private javax.swing.JTable tbSalesDetails;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtID_delete;
