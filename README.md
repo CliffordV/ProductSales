@@ -1,6 +1,6 @@
 # Product Sales System
 NetBeans IDE 8.2</br>
-Software Engineering Assessment 
+Software Engineering Assessment #1
 
 JDBC + SQLite
 
